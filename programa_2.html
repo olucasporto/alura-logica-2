@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function desenhaQuadrado(posicaoX, posicaoY, cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincellfillStroke = 'black';
+        // pincel.strokeStyle = 'red';
+
+        pincel.fillRect(posicaoX, posicaoY, 50, 50);
+        pincel.strokeRect(posicaoX, posicaoY, 50, 50);
+    }
+
+    // function sorteia(inicio, limite) {
+    //     for (var numero = 0; numero <= inicio; numero) {
+    //         numero = Math.round(Math.random() * limite)
+
+    //         if (numero >= inicio) {
+    //             return numero
+    //             break
+    //         }
+    //     }
+    // }
+
+    for (var local = 0; local < 600; local = local + 50) {
+        for (var local2 = 0; local2 < 400; local2 = local2 + 50) {
+            desenhaQuadrado(local, local2, 'green')
+        }
+    }
+</script>
